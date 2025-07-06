@@ -12,7 +12,8 @@ set -ouex pipefail
 # this installs a package from fedora repos
 wget https://packages.microsoft.com/keys/microsoft.asc
 mv microsoft.asc /etc/pki/rpm-gpg
-dnf5 install -y tmux azure-cli 
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+dnf5 install -y tmux azure-cli code 
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
