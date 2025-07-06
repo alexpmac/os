@@ -11,7 +11,8 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y tmux 
-
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+dnf5 install -y https://packages.microsoft.com/config/rhel/9.0/packages-microsoft-prod.rpm
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
