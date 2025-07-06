@@ -22,7 +22,7 @@ gext enable 307 615 7065
 dnf install -y dnf-plugins-core
 dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 
-wget https://desktop.docker.com/linux/main/amd64/docker-desktop-x86_64.rpm?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
+wget https://desktop.docker.com/linux/main/amd64/docker-desktop-x86_64.rpm
 
 dnf install ./docker-desktop-x86_64.rpm
 
