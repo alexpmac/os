@@ -10,7 +10,8 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-rpm --import https://packages.microsoft.com/keys/microsoft.asc
+wget https://packages.microsoft.com/keys/microsoft.asc
+mv microsoft.asc /etc/pki/rpm-gpg
 dnf5 install -y tmux azure-cli 
 # Use a COPR Example:
 #
